@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.55.0" timestamp="2025-03-30T11:02:37.778">
+<file name="/Users/saumyamishra/Documents/Github/Group_saumya511_lamkane0708/assignment5/src/main/java/concurrentSolution/ConcurrentMain.java">
+<violation beginline="1" endline="1" begincolumn="9" endcolumn="26" rule="PackageCase" ruleset="Code Style" package="concurrentSolution" class="ConcurrentMain" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#packagecase" priority="3">
+Package name contains upper case characters
+</violation>
+<violation beginline="13" endline="13" begincolumn="27" endcolumn="39" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ConcurrentMain" method="main" variable="args" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'args' is not assigned and could be declared final
+</violation>
+<violation beginline="14" endline="14" begincolumn="24" endcolumn="24" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="concurrentSolution" class="ConcurrentMain" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="15" endline="15" begincolumn="7" endcolumn="24" rule="SystemPrintln" ruleset="Best Practices" package="concurrentSolution" class="ConcurrentMain" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="16" endline="16" begincolumn="7" endcolumn="24" rule="SystemPrintln" ruleset="Best Practices" package="concurrentSolution" class="ConcurrentMain" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="20" endline="20" begincolumn="5" endcolumn="35" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ConcurrentMain" method="main" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'inputDirectory' could be declared final
+</violation>
+</file>
+<file name="/Users/saumyamishra/Documents/Github/Group_saumya511_lamkane0708/assignment5/src/main/java/concurrentSolution/ConcurrentProcessor.java">
+<violation beginline="1" endline="1" begincolumn="9" endcolumn="26" rule="PackageCase" ruleset="Code Style" package="concurrentSolution" class="ConcurrentProcessor" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#packagecase" priority="3">
+Package name contains upper case characters
+</violation>
+<violation beginline="31" endline="31" begincolumn="30" endcolumn="50" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ConcurrentProcessor" method="ConcurrentProcessor" variable="inputDirectory" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'inputDirectory' is not assigned and could be declared final
+</violation>
+<violation beginline="34" endline="34" begincolumn="28" endcolumn="47" rule="ConstructorCallsOverridableMethod" ruleset="Error Prone" package="concurrentSolution" class="ConcurrentProcessor" method="ConcurrentProcessor" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#constructorcallsoverridablemethod" priority="1">
+Overridable method 'getOutputDirectory' called during object construction
+</violation>
+<violation beginline="48" endline="48" begincolumn="33" endcolumn="50" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ConcurrentProcessor" method="ConcurrentProcessor" variable="coursesFile" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'coursesFile' is not assigned and could be declared final
+</violation>
+<violation beginline="48" endline="48" begincolumn="76" endcolumn="97" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ConcurrentProcessor" method="ConcurrentProcessor" variable="outputDirectory" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'outputDirectory' is not assigned and could be declared final
+</violation>
+<violation beginline="48" endline="48" begincolumn="53" endcolumn="73" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ConcurrentProcessor" method="ConcurrentProcessor" variable="studentVleFile" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'studentVleFile' is not assigned and could be declared final
+</violation>
+<violation beginline="80" endline="80" begincolumn="7" endcolumn="24" rule="SystemPrintln" ruleset="Best Practices" package="concurrentSolution" class="ConcurrentProcessor" method="execute" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="84" endline="84" begincolumn="7" endcolumn="48" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ConcurrentProcessor" method="execute" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'outputDir' could be declared final
+</violation>
+<violation beginline="89" endline="89" begincolumn="7" endcolumn="24" rule="SystemPrintln" ruleset="Best Practices" package="concurrentSolution" class="ConcurrentProcessor" method="execute" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="92" endline="94" begincolumn="7" endcolumn="7" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ConcurrentProcessor" method="execute" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'producerFuture' could be declared final
+</violation>
+<violation beginline="97" endline="97" begincolumn="7" endcolumn="57" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ConcurrentProcessor" method="execute" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'consumerFutures' could be declared final
+</violation>
+<violation beginline="110" endline="110" begincolumn="9" endcolumn="26" rule="SystemPrintln" ruleset="Best Practices" package="concurrentSolution" class="ConcurrentProcessor" method="execute" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.err.println is used
+</violation>
+<violation beginline="114" endline="114" begincolumn="12" endcolumn="27" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ConcurrentProcessor" method="execute" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'future' could be declared final
+</violation>
+<violation beginline="118" endline="118" begincolumn="11" endcolumn="28" rule="SystemPrintln" ruleset="Best Practices" package="concurrentSolution" class="ConcurrentProcessor" method="execute" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.err.println is used
+</violation>
+<violation beginline="123" endline="123" begincolumn="7" endcolumn="24" rule="SystemPrintln" ruleset="Best Practices" package="concurrentSolution" class="ConcurrentProcessor" method="execute" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="126" endline="126" begincolumn="7" endcolumn="24" rule="SystemPrintln" ruleset="Best Practices" package="concurrentSolution" class="ConcurrentProcessor" method="execute" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="128" endline="128" begincolumn="7" endcolumn="24" rule="SystemPrintln" ruleset="Best Practices" package="concurrentSolution" class="ConcurrentProcessor" method="execute" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.err.println is used
+</violation>
+<violation beginline="144" endline="144" begincolumn="32" endcolumn="32" rule="ShortVariable" ruleset="Code Style" package="concurrentSolution" class="ConcurrentProcessor" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like o
+</violation>
+<violation beginline="144" endline="144" begincolumn="25" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ConcurrentProcessor" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'o' is not assigned and could be declared final
+</violation>
+<violation beginline="146" endline="146" begincolumn="7" endcolumn="19" rule="OnlyOneReturn" ruleset="Code Style" package="concurrentSolution" class="ConcurrentProcessor" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="148" endline="148" begincolumn="5" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ConcurrentProcessor" method="equals" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'that' could be declared final
+</violation>
+</file>
+<file name="/Users/saumyamishra/Documents/Github/Group_saumya511_lamkane0708/assignment5/src/main/java/concurrentSolution/Consumer.java">
+<violation beginline="1" endline="1" begincolumn="9" endcolumn="26" rule="PackageCase" ruleset="Code Style" package="concurrentSolution" class="Consumer" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#packagecase" priority="3">
+Package name contains upper case characters
+</violation>
+<violation beginline="24" endline="24" begincolumn="50" endcolumn="79" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="Consumer" method="Consumer" variable="coursesMap" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'coursesMap' is not assigned and could be declared final
+</violation>
+<violation beginline="24" endline="24" begincolumn="21" endcolumn="47" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="Consumer" method="Consumer" variable="queue" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'queue' is not assigned and could be declared final
+</violation>
+<violation beginline="25" endline="25" begincolumn="9" endcolumn="57" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="Consumer" method="Consumer" variable="aggregatedData" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'aggregatedData' is not assigned and could be declared final
+</violation>
+<violation beginline="35" endline="35" begincolumn="17" endcolumn="42" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="Consumer" method="run" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'line' could be declared final
+</violation>
+</file>
+<file name="/Users/saumyamishra/Documents/Github/Group_saumya511_lamkane0708/assignment5/src/main/java/concurrentSolution/Producer.java">
+<violation beginline="1" endline="1" begincolumn="9" endcolumn="26" rule="PackageCase" ruleset="Code Style" package="concurrentSolution" class="Producer" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#packagecase" priority="3">
+Package name contains upper case characters
+</violation>
+<violation beginline="28" endline="28" begincolumn="19" endcolumn="33" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="Producer" method="Producer" variable="filePath" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'filePath' is not assigned and could be declared final
+</violation>
+<violation beginline="28" endline="28" begincolumn="65" endcolumn="80" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="Producer" method="Producer" variable="numConsumers" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'numConsumers' is not assigned and could be declared final
+</violation>
+<violation beginline="28" endline="28" begincolumn="36" endcolumn="62" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="Producer" method="Producer" variable="queue" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'queue' is not assigned and could be declared final
+</violation>
+<violation beginline="42" endline="42" begincolumn="14" endcolumn="47" rule="AssignmentInOperand" ruleset="Error Prone" package="concurrentSolution" class="Producer" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#assignmentinoperand" priority="3">
+Avoid assignments in operands
+</violation>
+<violation beginline="42" endline="63" begincolumn="14" endcolumn="47" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="concurrentSolution" class="Producer" method="run" variable="line" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'line' (lines '42'-'63').
+</violation>
+<violation beginline="51" endline="51" begincolumn="7" endcolumn="25" rule="AvoidPrintStackTrace" ruleset="Best Practices" package="concurrentSolution" class="Producer" method="run" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#avoidprintstacktrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+</file>
+<file name="/Users/saumyamishra/Documents/Github/Group_saumya511_lamkane0708/assignment5/src/main/java/concurrentSolution/ThresholdMain.java">
+<violation beginline="1" endline="1" begincolumn="9" endcolumn="26" rule="PackageCase" ruleset="Code Style" package="concurrentSolution" class="ThresholdMain" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#packagecase" priority="3">
+Package name contains upper case characters
+</violation>
+<violation beginline="16" endline="16" begincolumn="27" endcolumn="39" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ThresholdMain" method="main" variable="args" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'args' is not assigned and could be declared final
+</violation>
+<violation beginline="17" endline="17" begincolumn="24" endcolumn="24" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="concurrentSolution" class="ThresholdMain" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="18" endline="18" begincolumn="7" endcolumn="24" rule="SystemPrintln" ruleset="Best Practices" package="concurrentSolution" class="ThresholdMain" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="19" endline="19" begincolumn="7" endcolumn="24" rule="SystemPrintln" ruleset="Best Practices" package="concurrentSolution" class="ThresholdMain" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="20" endline="20" begincolumn="7" endcolumn="24" rule="SystemPrintln" ruleset="Best Practices" package="concurrentSolution" class="ThresholdMain" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="21" endline="21" begincolumn="7" endcolumn="24" rule="SystemPrintln" ruleset="Best Practices" package="concurrentSolution" class="ThresholdMain" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="23" endline="23" begincolumn="7" endcolumn="24" rule="SystemPrintln" ruleset="Best Practices" package="concurrentSolution" class="ThresholdMain" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="27" endline="27" begincolumn="5" endcolumn="36" rule="PrematureDeclaration" ruleset="Code Style" package="concurrentSolution" class="ThresholdMain" method="main" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#prematuredeclaration" priority="3">
+Avoid declaring a variable if it is unreferenced before a possible exit point.
+</violation>
+<violation beginline="27" endline="46" begincolumn="12" endcolumn="36" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="concurrentSolution" class="ThresholdMain" method="main" variable="outputDirectory" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'outputDirectory' (lines '27'-'46').
+</violation>
+<violation beginline="27" endline="27" begincolumn="5" endcolumn="36" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ThresholdMain" method="main" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'outputDirectory' could be declared final
+</violation>
+<violation beginline="35" endline="35" begincolumn="7" endcolumn="24" rule="SystemPrintln" ruleset="Best Practices" package="concurrentSolution" class="ThresholdMain" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="40" endline="40" begincolumn="7" endcolumn="87" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ThresholdMain" method="main" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'processor' could be declared final
+</violation>
+<violation beginline="43" endline="43" begincolumn="7" endcolumn="24" rule="SystemPrintln" ruleset="Best Practices" package="concurrentSolution" class="ThresholdMain" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.err.println is used
+</violation>
+</file>
+<file name="/Users/saumyamishra/Documents/Github/Group_saumya511_lamkane0708/assignment5/src/main/java/concurrentSolution/ThresholdProcessor.java">
+<violation beginline="1" endline="1" begincolumn="9" endcolumn="26" rule="PackageCase" ruleset="Code Style" package="concurrentSolution" class="ThresholdProcessor" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#packagecase" priority="3">
+Package name contains upper case characters
+</violation>
+<violation beginline="27" endline="27" begincolumn="29" endcolumn="50" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ThresholdProcessor" method="ThresholdProcessor" variable="outputDirectory" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'outputDirectory' is not assigned and could be declared final
+</violation>
+<violation beginline="27" endline="27" begincolumn="53" endcolumn="65" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ThresholdProcessor" method="ThresholdProcessor" variable="threshold" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'threshold' is not assigned and could be declared final
+</violation>
+<violation beginline="41" endline="41" begincolumn="5" endcolumn="48" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ThresholdProcessor" method="processFiles" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'outputPath' could be declared final
+</violation>
+<violation beginline="47" endline="47" begincolumn="5" endcolumn="64" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ThresholdProcessor" method="processFiles" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'allData' could be declared final
+</violation>
+<violation beginline="50" endline="50" begincolumn="12" endcolumn="20" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ThresholdProcessor" method="processFiles" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'path' could be declared final
+</violation>
+<violation beginline="51" endline="51" begincolumn="9" endcolumn="55" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ThresholdProcessor" method="processFiles" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'fileName' could be declared final
+</violation>
+<violation beginline="56" endline="56" begincolumn="16" endcolumn="33" rule="LongVariable" ruleset="Code Style" package="concurrentSolution" class="ThresholdProcessor" method="processFiles" variable="modulePresentation" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like modulePresentation
+</violation>
+<violation beginline="56" endline="56" begincolumn="16" endcolumn="80" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="concurrentSolution" class="ThresholdProcessor" method="processFiles" variable="modulePresentation" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'modulePresentation' (lines '56'-'56').
+</violation>
+<violation beginline="56" endline="82" begincolumn="16" endcolumn="80" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="concurrentSolution" class="ThresholdProcessor" method="processFiles" variable="modulePresentation" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'modulePresentation' (lines '56'-'82').
+</violation>
+<violation beginline="56" endline="56" begincolumn="9" endcolumn="80" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ThresholdProcessor" method="processFiles" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'modulePresentation' could be declared final
+</violation>
+<violation beginline="57" endline="57" begincolumn="9" endcolumn="71" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ThresholdProcessor" method="processFiles" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'lines' could be declared final
+</violation>
+<violation beginline="59" endline="59" begincolumn="9" endcolumn="60" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ThresholdProcessor" method="processFiles" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'activityData' could be declared final
+</violation>
+<violation beginline="60" endline="60" begincolumn="14" endcolumn="24" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ThresholdProcessor" method="processFiles" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'line' could be declared final
+</violation>
+<violation beginline="62" endline="62" begincolumn="13" endcolumn="44" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ThresholdProcessor" method="processFiles" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'parts' could be declared final
+</violation>
+<violation beginline="63" endline="63" begincolumn="33" endcolumn="33" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="concurrentSolution" class="ThresholdProcessor" method="processFiles" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="64" endline="64" begincolumn="15" endcolumn="32" rule="SystemPrintln" ruleset="Best Practices" package="concurrentSolution" class="ThresholdProcessor" method="processFiles" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.err.println is used
+</violation>
+<violation beginline="67" endline="67" begincolumn="13" endcolumn="56" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ThresholdProcessor" method="processFiles" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'date' could be declared final
+</violation>
+<violation beginline="68" endline="68" begincolumn="13" endcolumn="58" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ThresholdProcessor" method="processFiles" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'clicks' could be declared final
+</violation>
+<violation beginline="71" endline="71" begincolumn="13" endcolumn="30" rule="SystemPrintln" ruleset="Best Practices" package="concurrentSolution" class="ThresholdProcessor" method="processFiles" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.err.println is used
+</violation>
+<violation beginline="85" endline="85" begincolumn="32" endcolumn="32" rule="ShortVariable" ruleset="Code Style" package="concurrentSolution" class="ThresholdProcessor" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like o
+</violation>
+<violation beginline="85" endline="85" begincolumn="25" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ThresholdProcessor" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'o' is not assigned and could be declared final
+</violation>
+<violation beginline="87" endline="87" begincolumn="7" endcolumn="19" rule="OnlyOneReturn" ruleset="Code Style" package="concurrentSolution" class="ThresholdProcessor" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="89" endline="89" begincolumn="5" endcolumn="52" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="concurrentSolution" class="ThresholdProcessor" method="equals" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'that' could be declared final
+</violation>
+</file>
+<file name="/Users/saumyamishra/Documents/Github/Group_saumya511_lamkane0708/assignment5/src/main/java/model/Course.java">
+<violation beginline="12" endline="12" begincolumn="21" endcolumn="38" rule="LongVariable" ruleset="Code Style" package="model" class="Course" variable="presentationLength" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like presentationLength
+</violation>
+<violation beginline="21" endline="21" begincolumn="65" endcolumn="82" rule="LongVariable" ruleset="Code Style" package="model" class="Course" method="Course" variable="presentationLength" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like presentationLength
+</violation>
+<violation beginline="21" endline="21" begincolumn="17" endcolumn="33" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="model" class="Course" method="Course" variable="codeModule" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'codeModule' is not assigned and could be declared final
+</violation>
+<violation beginline="21" endline="21" begincolumn="36" endcolumn="58" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="model" class="Course" method="Course" variable="codePresentation" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'codePresentation' is not assigned and could be declared final
+</violation>
+<violation beginline="21" endline="21" begincolumn="61" endcolumn="82" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="model" class="Course" method="Course" variable="presentationLength" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'presentationLength' is not assigned and could be declared final
+</violation>
+<violation beginline="55" endline="55" begincolumn="32" endcolumn="32" rule="ShortVariable" ruleset="Code Style" package="model" class="Course" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like o
+</violation>
+<violation beginline="55" endline="55" begincolumn="25" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="model" class="Course" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'o' is not assigned and could be declared final
+</violation>
+<violation beginline="56" endline="56" begincolumn="20" endcolumn="31" rule="OnlyOneReturn" ruleset="Code Style" package="model" class="Course" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="56" endline="56" begincolumn="5" endcolumn="31" rule="IfStmtsMustUseBraces" ruleset="Code Style" package="model" class="Course" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#ifstmtsmustusebraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="56" endline="56" begincolumn="20" endcolumn="31" rule="ControlStatementBraces" ruleset="Code Style" package="model" class="Course" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#controlstatementbraces" priority="3">
+This statement should have braces
+</violation>
+<violation beginline="57" endline="57" begincolumn="50" endcolumn="62" rule="OnlyOneReturn" ruleset="Code Style" package="model" class="Course" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="57" endline="57" begincolumn="5" endcolumn="62" rule="IfStmtsMustUseBraces" ruleset="Code Style" package="model" class="Course" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#ifstmtsmustusebraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="57" endline="57" begincolumn="50" endcolumn="62" rule="ControlStatementBraces" ruleset="Code Style" package="model" class="Course" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#controlstatementbraces" priority="3">
+This statement should have braces
+</violation>
+<violation beginline="58" endline="58" begincolumn="5" endcolumn="30" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="model" class="Course" method="equals" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'course' could be declared final
+</violation>
+</file>
+<file name="/Users/saumyamishra/Documents/Github/Group_saumya511_lamkane0708/assignment5/src/main/java/sequentialSolution/SequentialMain.java">
+<violation beginline="1" endline="1" begincolumn="9" endcolumn="26" rule="PackageCase" ruleset="Code Style" package="sequentialSolution" class="SequentialMain" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#packagecase" priority="3">
+Package name contains upper case characters
+</violation>
+<violation beginline="16" endline="16" begincolumn="27" endcolumn="39" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="sequentialSolution" class="SequentialMain" method="main" variable="args" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'args' is not assigned and could be declared final
+</violation>
+<violation beginline="17" endline="17" begincolumn="24" endcolumn="24" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="sequentialSolution" class="SequentialMain" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="18" endline="18" begincolumn="7" endcolumn="24" rule="SystemPrintln" ruleset="Best Practices" package="sequentialSolution" class="SequentialMain" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="19" endline="19" begincolumn="7" endcolumn="24" rule="SystemPrintln" ruleset="Best Practices" package="sequentialSolution" class="SequentialMain" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="23" endline="23" begincolumn="5" endcolumn="35" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="sequentialSolution" class="SequentialMain" method="main" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'inputDirectory' could be declared final
+</violation>
+</file>
+<file name="/Users/saumyamishra/Documents/Github/Group_saumya511_lamkane0708/assignment5/src/main/java/sequentialSolution/SequentialProcessor.java">
+<violation beginline="1" endline="1" begincolumn="9" endcolumn="26" rule="PackageCase" ruleset="Code Style" package="sequentialSolution" class="SequentialProcessor" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#packagecase" priority="3">
+Package name contains upper case characters
+</violation>
+<violation beginline="25" endline="25" begincolumn="30" endcolumn="50" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="sequentialSolution" class="SequentialProcessor" method="SequentialProcessor" variable="inputDirectory" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'inputDirectory' is not assigned and could be declared final
+</violation>
+<violation beginline="28" endline="28" begincolumn="28" endcolumn="47" rule="ConstructorCallsOverridableMethod" ruleset="Error Prone" package="sequentialSolution" class="SequentialProcessor" method="SequentialProcessor" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#constructorcallsoverridablemethod" priority="1">
+Overridable method 'getOutputDirectory' called during object construction
+</violation>
+<violation beginline="38" endline="38" begincolumn="33" endcolumn="50" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="sequentialSolution" class="SequentialProcessor" method="SequentialProcessor" variable="coursesFile" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'coursesFile' is not assigned and could be declared final
+</violation>
+<violation beginline="38" endline="38" begincolumn="76" endcolumn="97" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="sequentialSolution" class="SequentialProcessor" method="SequentialProcessor" variable="outputDirectory" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'outputDirectory' is not assigned and could be declared final
+</violation>
+<violation beginline="38" endline="38" begincolumn="53" endcolumn="73" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="sequentialSolution" class="SequentialProcessor" method="SequentialProcessor" variable="studentVleFile" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'studentVleFile' is not assigned and could be declared final
+</violation>
+<violation beginline="59" endline="59" begincolumn="7" endcolumn="48" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="sequentialSolution" class="SequentialProcessor" method="execute" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'outputDir' could be declared final
+</violation>
+<violation beginline="64" endline="64" begincolumn="7" endcolumn="24" rule="SystemPrintln" ruleset="Best Practices" package="sequentialSolution" class="SequentialProcessor" method="execute" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="65" endline="65" begincolumn="7" endcolumn="90" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="sequentialSolution" class="SequentialProcessor" method="execute" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'coursesMap' could be declared final
+</violation>
+<violation beginline="67" endline="67" begincolumn="7" endcolumn="24" rule="SystemPrintln" ruleset="Best Practices" package="sequentialSolution" class="SequentialProcessor" method="execute" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="68" endline="69" begincolumn="7" endcolumn="37" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="sequentialSolution" class="SequentialProcessor" method="execute" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'summaryData' could be declared final
+</violation>
+<violation beginline="71" endline="71" begincolumn="7" endcolumn="24" rule="SystemPrintln" ruleset="Best Practices" package="sequentialSolution" class="SequentialProcessor" method="execute" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="74" endline="74" begincolumn="7" endcolumn="24" rule="SystemPrintln" ruleset="Best Practices" package="sequentialSolution" class="SequentialProcessor" method="execute" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+<violation beginline="76" endline="76" begincolumn="7" endcolumn="24" rule="SystemPrintln" ruleset="Best Practices" package="sequentialSolution" class="SequentialProcessor" method="execute" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.err.println is used
+</violation>
+<violation beginline="99" endline="99" begincolumn="32" endcolumn="32" rule="ShortVariable" ruleset="Code Style" package="sequentialSolution" class="SequentialProcessor" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like o
+</violation>
+<violation beginline="99" endline="99" begincolumn="25" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="sequentialSolution" class="SequentialProcessor" method="equals" variable="o" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'o' is not assigned and could be declared final
+</violation>
+<violation beginline="101" endline="101" begincolumn="7" endcolumn="19" rule="OnlyOneReturn" ruleset="Code Style" package="sequentialSolution" class="SequentialProcessor" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="103" endline="103" begincolumn="5" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="sequentialSolution" class="SequentialProcessor" method="equals" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'that' could be declared final
+</violation>
+</file>
+<file name="/Users/saumyamishra/Documents/Github/Group_saumya511_lamkane0708/assignment5/src/main/java/util/CourseActivityCsvWriter.java">
+<violation beginline="20" endline="20" begincolumn="40" endcolumn="61" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="util" class="CourseActivityCsvWriter" method="writeSummaryFiles" variable="outputDirectory" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'outputDirectory' is not assigned and could be declared final
+</violation>
+<violation beginline="21" endline="21" begincolumn="7" endcolumn="45" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="util" class="CourseActivityCsvWriter" method="writeSummaryFiles" variable="data" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'data' is not assigned and could be declared final
+</violation>
+<violation beginline="26" endline="26" begincolumn="10" endcolumn="55" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="CourseActivityCsvWriter" method="writeSummaryFiles" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'entry' could be declared final
+</violation>
+<violation beginline="27" endline="27" begincolumn="7" endcolumn="39" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="CourseActivityCsvWriter" method="writeSummaryFiles" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'courseKey' could be declared final
+</violation>
+<violation beginline="28" endline="28" begincolumn="7" endcolumn="59" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="CourseActivityCsvWriter" method="writeSummaryFiles" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'activityData' could be declared final
+</violation>
+<violation beginline="34" endline="34" begincolumn="14" endcolumn="66" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="util" class="CourseActivityCsvWriter" method="writeSummaryFiles" variable="fileName" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'fileName' (lines '34'-'34').
+</violation>
+<violation beginline="34" endline="47" begincolumn="14" endcolumn="66" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="util" class="CourseActivityCsvWriter" method="writeSummaryFiles" variable="fileName" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'fileName' (lines '34'-'47').
+</violation>
+<violation beginline="34" endline="34" begincolumn="7" endcolumn="66" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="CourseActivityCsvWriter" method="writeSummaryFiles" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'fileName' could be declared final
+</violation>
+<violation beginline="41" endline="41" begincolumn="14" endcolumn="49" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="CourseActivityCsvWriter" method="writeSummaryFiles" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'activity' could be declared final
+</violation>
+</file>
+<file name="/Users/saumyamishra/Documents/Github/Group_saumya511_lamkane0708/assignment5/src/main/java/util/CsvFileReader.java">
+<violation beginline="20" endline="20" begincolumn="44" endcolumn="58" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="util" class="CsvFileReader" method="readCsvFile" variable="filePath" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'filePath' is not assigned and could be declared final
+</violation>
+<violation beginline="21" endline="34" begincolumn="22" endcolumn="46" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="util" class="CsvFileReader" method="readCsvFile" variable="lines" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'lines' (lines '21'-'34').
+</violation>
+<violation beginline="21" endline="21" begincolumn="9" endcolumn="46" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="CsvFileReader" method="readCsvFile" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'lines' could be declared final
+</violation>
+<violation beginline="29" endline="29" begincolumn="20" endcolumn="53" rule="AssignmentInOperand" ruleset="Error Prone" package="util" class="CsvFileReader" method="readCsvFile" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#assignmentinoperand" priority="3">
+Avoid assignments in operands
+</violation>
+<violation beginline="29" endline="34" begincolumn="20" endcolumn="53" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="util" class="CsvFileReader" method="readCsvFile" variable="line" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'line' (lines '29'-'34').
+</violation>
+</file>
+<file name="/Users/saumyamishra/Documents/Github/Group_saumya511_lamkane0708/assignment5/src/main/java/util/LearningAnalyticsProcessor.java">
+<violation beginline="26" endline="26" begincolumn="51" endcolumn="72" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="loadCourses" variable="coursesFilePath" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'coursesFilePath' is not assigned and could be declared final
+</violation>
+<violation beginline="27" endline="27" begincolumn="9" endcolumn="71" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="loadCourses" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'lines' could be declared final
+</violation>
+<violation beginline="28" endline="28" begincolumn="9" endcolumn="53" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="loadCourses" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'courses' could be declared final
+</violation>
+<violation beginline="30" endline="30" begincolumn="14" endcolumn="24" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="loadCourses" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'line' could be declared final
+</violation>
+<violation beginline="32" endline="32" begincolumn="17" endcolumn="80" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="loadCourses" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'parts' could be declared final
+</violation>
+<violation beginline="33" endline="33" begincolumn="37" endcolumn="37" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="util" class="LearningAnalyticsProcessor" method="loadCourses" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="34" endline="34" begincolumn="21" endcolumn="38" rule="SystemPrintln" ruleset="Best Practices" package="util" class="LearningAnalyticsProcessor" method="loadCourses" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.err.println is used
+</violation>
+<violation beginline="38" endline="38" begincolumn="17" endcolumn="62" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="loadCourses" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'codeModule' could be declared final
+</violation>
+<violation beginline="39" endline="39" begincolumn="17" endcolumn="68" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="loadCourses" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'codePresentation' could be declared final
+</violation>
+<violation beginline="40" endline="40" begincolumn="17" endcolumn="73" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="loadCourses" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'length' could be declared final
+</violation>
+<violation beginline="42" endline="42" begincolumn="17" endcolumn="64" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="loadCourses" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'key' could be declared final
+</violation>
+<violation beginline="45" endline="45" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Best Practices" package="util" class="LearningAnalyticsProcessor" method="loadCourses" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.err.println is used
+</violation>
+<violation beginline="60" endline="60" begincolumn="16" endcolumn="33" rule="LongVariable" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="processStudentVle" variable="studentVleFilePath" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like studentVleFilePath
+</violation>
+<violation beginline="60" endline="60" begincolumn="36" endcolumn="65" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="processStudentVle" variable="coursesMap" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'coursesMap' is not assigned and could be declared final
+</violation>
+<violation beginline="60" endline="60" begincolumn="9" endcolumn="33" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="processStudentVle" variable="studentVleFilePath" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'studentVleFilePath' is not assigned and could be declared final
+</violation>
+<violation beginline="61" endline="61" begincolumn="9" endcolumn="74" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="processStudentVle" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'lines' could be declared final
+</violation>
+<violation beginline="62" endline="62" begincolumn="9" endcolumn="72" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="processStudentVle" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'summaryData' could be declared final
+</violation>
+<violation beginline="64" endline="64" begincolumn="14" endcolumn="24" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="processStudentVle" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'line' could be declared final
+</violation>
+<violation beginline="76" endline="76" begincolumn="64" endcolumn="93" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="processStudentActivityLine" variable="coursesMap" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'coursesMap' is not assigned and could be declared final
+</violation>
+<violation beginline="76" endline="76" begincolumn="51" endcolumn="61" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="processStudentActivityLine" variable="line" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'line' is not assigned and could be declared final
+</violation>
+<violation beginline="77" endline="77" begincolumn="9" endcolumn="57" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="processStudentActivityLine" variable="aggregatedData" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'aggregatedData' is not assigned and could be declared final
+</violation>
+<violation beginline="79" endline="79" begincolumn="13" endcolumn="76" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="processStudentActivityLine" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'parts' could be declared final
+</violation>
+<violation beginline="80" endline="80" begincolumn="33" endcolumn="33" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="util" class="LearningAnalyticsProcessor" method="processStudentActivityLine" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="81" endline="81" begincolumn="17" endcolumn="34" rule="SystemPrintln" ruleset="Best Practices" package="util" class="LearningAnalyticsProcessor" method="processStudentActivityLine" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.err.println is used
+</violation>
+<violation beginline="82" endline="82" begincolumn="17" endcolumn="23" rule="OnlyOneReturn" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="processStudentActivityLine" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="85" endline="85" begincolumn="13" endcolumn="58" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="processStudentActivityLine" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'codeModule' could be declared final
+</violation>
+<violation beginline="86" endline="86" begincolumn="13" endcolumn="64" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="processStudentActivityLine" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'codePresentation' could be declared final
+</violation>
+<violation beginline="87" endline="87" begincolumn="13" endcolumn="67" rule="PrematureDeclaration" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="processStudentActivityLine" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#prematuredeclaration" priority="3">
+Avoid declaring a variable if it is unreferenced before a possible exit point.
+</violation>
+<violation beginline="87" endline="100" begincolumn="17" endcolumn="67" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="util" class="LearningAnalyticsProcessor" method="processStudentActivityLine" variable="date" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'date' (lines '87'-'100').
+</violation>
+<violation beginline="87" endline="87" begincolumn="13" endcolumn="67" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="processStudentActivityLine" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'date' could be declared final
+</violation>
+<violation beginline="88" endline="88" begincolumn="13" endcolumn="71" rule="PrematureDeclaration" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="processStudentActivityLine" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#prematuredeclaration" priority="3">
+Avoid declaring a variable if it is unreferenced before a possible exit point.
+</violation>
+<violation beginline="88" endline="100" begincolumn="17" endcolumn="71" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="util" class="LearningAnalyticsProcessor" method="processStudentActivityLine" variable="sumClick" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'sumClick' (lines '88'-'100').
+</violation>
+<violation beginline="88" endline="88" begincolumn="13" endcolumn="71" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="processStudentActivityLine" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'sumClick' could be declared final
+</violation>
+<violation beginline="90" endline="90" begincolumn="13" endcolumn="60" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="LearningAnalyticsProcessor" method="processStudentActivityLine" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'key' could be declared final
+</violation>
+<violation beginline="98" endline="98" begincolumn="13" endcolumn="30" rule="SystemPrintln" ruleset="Best Practices" package="util" class="LearningAnalyticsProcessor" method="processStudentActivityLine" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.err.println is used
+</violation>
+</file>
+<file name="/Users/saumyamishra/Documents/Github/Group_saumya511_lamkane0708/assignment5/src/main/java/util/ThresholdFileWriter.java">
+<violation beginline="19" endline="19" begincolumn="43" endcolumn="64" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="util" class="ThresholdFileWriter" method="writeThresholdFile" variable="outputDirectory" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'outputDirectory' is not assigned and could be declared final
+</violation>
+<violation beginline="19" endline="19" begincolumn="67" endcolumn="79" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="util" class="ThresholdFileWriter" method="writeThresholdFile" variable="threshold" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'threshold' is not assigned and could be declared final
+</violation>
+<violation beginline="20" endline="20" begincolumn="43" endcolumn="84" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="util" class="ThresholdFileWriter" method="writeThresholdFile" variable="allData" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'allData' is not assigned and could be declared final
+</violation>
+<violation beginline="21" endline="42" begincolumn="16" endcolumn="82" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="util" class="ThresholdFileWriter" method="writeThresholdFile" variable="thresholdFile" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'thresholdFile' (lines '21'-'42').
+</violation>
+<violation beginline="21" endline="21" begincolumn="9" endcolumn="82" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="ThresholdFileWriter" method="writeThresholdFile" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'thresholdFile' could be declared final
+</violation>
+<violation beginline="26" endline="26" begincolumn="18" endcolumn="63" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="ThresholdFileWriter" method="writeThresholdFile" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'entry' could be declared final
+</violation>
+<violation beginline="27" endline="27" begincolumn="24" endcolumn="41" rule="LongVariable" ruleset="Code Style" package="util" class="ThresholdFileWriter" method="writeThresholdFile" variable="modulePresentation" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#longvariable" priority="3">
+Avoid excessively long variable names like modulePresentation
+</violation>
+<violation beginline="27" endline="27" begincolumn="24" endcolumn="58" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="util" class="ThresholdFileWriter" method="writeThresholdFile" variable="modulePresentation" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DD'-anomaly for variable 'modulePresentation' (lines '27'-'27').
+</violation>
+<violation beginline="27" endline="42" begincolumn="24" endcolumn="58" rule="DataflowAnomalyAnalysis" ruleset="Error Prone" package="util" class="ThresholdFileWriter" method="writeThresholdFile" variable="modulePresentation" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_errorprone.html#dataflowanomalyanalysis" priority="5">
+Found 'DU'-anomaly for variable 'modulePresentation' (lines '27'-'42').
+</violation>
+<violation beginline="27" endline="27" begincolumn="17" endcolumn="58" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="ThresholdFileWriter" method="writeThresholdFile" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'modulePresentation' could be declared final
+</violation>
+<violation beginline="28" endline="28" begincolumn="17" endcolumn="69" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="ThresholdFileWriter" method="writeThresholdFile" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'activityData' could be declared final
+</violation>
+<violation beginline="30" endline="30" begincolumn="22" endcolumn="57" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="util" class="ThresholdFileWriter" method="writeThresholdFile" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'activity' could be declared final
+</violation>
+<violation beginline="41" endline="41" begincolumn="9" endcolumn="26" rule="SystemPrintln" ruleset="Best Practices" package="util" class="ThresholdFileWriter" method="writeThresholdFile" externalInfoUrl="https://pmd.github.io/pmd-6.55.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.println is used
+</violation>
+</file>
+</pmd>

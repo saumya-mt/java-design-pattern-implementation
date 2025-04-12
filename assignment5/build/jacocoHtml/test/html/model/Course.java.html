@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Course.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">assignment5</a> &gt; <a href="index.source.html" class="el_package">model</a> &gt; <span class="el_source">Course.java</span></div><h1>Course.java</h1><pre class="source lang-java linenums">package model;
+
+import java.util.Objects;
+
+/**
+ * Represents a course in the OULAD dataset.
+ * This class is immutable and represents a course module with its presentation details.
+ */
+public class Course {
+  private final String codeModule;
+  private final String codePresentation;
+  private final int presentationLength;
+
+  /**
+   * Constructs a new Course instance.
+   *
+   * @param codeModule The module code (e.g., &quot;CS5010&quot;)
+   * @param codePresentation The presentation code (e.g., &quot;Spring2023&quot;)
+   * @param presentationLength The length of the course in days
+   */
+<span class="fc" id="L21">  public Course(String codeModule, String codePresentation, int presentationLength) {</span>
+<span class="fc" id="L22">    this.codeModule = codeModule;</span>
+<span class="fc" id="L23">    this.codePresentation = codePresentation;</span>
+<span class="fc" id="L24">    this.presentationLength = presentationLength;</span>
+<span class="fc" id="L25">  }</span>
+
+  /**
+   * Gets the module code of the course.
+   *
+   * @return The module code
+   */
+  public String getCodeModule() {
+<span class="fc" id="L33">    return codeModule;</span>
+  }
+
+  /**
+   * Gets the presentation code of the course.
+   *
+   * @return The presentation code
+   */
+  public String getCodePresentation() {
+<span class="fc" id="L42">    return codePresentation;</span>
+  }
+
+  /**
+   * Gets the length of the course presentation in days.
+   *
+   * @return The presentation length in days
+   */
+  public int getPresentationLength() {
+<span class="fc" id="L51">    return presentationLength;</span>
+  }
+
+  @Override
+  public boolean equals(Object o) {
+<span class="fc bfc" id="L56" title="All 2 branches covered.">    if (this == o) return true;</span>
+<span class="pc bpc" id="L57" title="2 of 4 branches missed.">    if (o == null || getClass() != o.getClass()) return false;</span>
+<span class="fc" id="L58">    Course course = (Course) o;</span>
+<span class="fc bfc" id="L59" title="All 2 branches covered.">    return presentationLength == course.presentationLength &amp;&amp;</span>
+<span class="fc bfc" id="L60" title="All 2 branches covered.">        Objects.equals(codeModule, course.codeModule) &amp;&amp;</span>
+<span class="fc bfc" id="L61" title="All 2 branches covered.">        Objects.equals(codePresentation, course.codePresentation);</span>
+  }
+
+  @Override
+  public int hashCode() {
+<span class="fc" id="L66">    return Objects.hash(codeModule, codePresentation, presentationLength);</span>
+  }
+
+  @Override
+  public String toString() {
+<span class="fc" id="L71">    return &quot;Course{&quot; +</span>
+        &quot;codeModule='&quot; + codeModule + '\'' +
+        &quot;, codePresentation='&quot; + codePresentation + '\'' +
+        &quot;, presentationLength=&quot; + presentationLength +
+        '}';
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

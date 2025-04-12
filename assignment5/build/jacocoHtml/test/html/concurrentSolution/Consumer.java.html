@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Consumer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">assignment5</a> &gt; <a href="index.source.html" class="el_package">concurrentSolution</a> &gt; <span class="el_source">Consumer.java</span></div><h1>Consumer.java</h1><pre class="source lang-java linenums">package concurrentSolution;
+
+import java.util.Map;
+import java.util.concurrent.BlockingQueue;
+import model.Course;
+import util.LearningAnalyticsProcessor;
+
+/**
+ * Consumer class that processes lines from a blocking queue and aggregates student activity data.
+ * Uses the StudentActivityProcessor utility class for data processing.
+ */
+public final class Consumer implements Runnable {
+    private final BlockingQueue&lt;String&gt; queue;
+    private final Map&lt;String, Course&gt; coursesMap;
+    private final Map&lt;String, Map&lt;Integer, Integer&gt;&gt; aggregatedData;
+
+    /**
+     * Constructs a new Consumer instance.
+     *
+     * @param queue The blocking queue to read lines from
+     * @param coursesMap Map of course keys to Course objects
+     * @param aggregatedData Map to store the aggregated click data
+     */
+    public Consumer(BlockingQueue&lt;String&gt; queue, Map&lt;String, Course&gt; coursesMap,
+<span class="fc" id="L25">        Map&lt;String, Map&lt;Integer, Integer&gt;&gt; aggregatedData) {</span>
+<span class="fc" id="L26">        this.queue = queue;</span>
+<span class="fc" id="L27">        this.coursesMap = coursesMap;</span>
+<span class="fc" id="L28">        this.aggregatedData = aggregatedData;</span>
+<span class="fc" id="L29">    }</span>
+
+    @Override
+    public void run() {
+        try {
+            while (true) {
+<span class="fc" id="L35">                String line = queue.take();</span>
+<span class="fc bfc" id="L36" title="All 2 branches covered.">                if (line.equals(Producer.POISON_PILL)) {</span>
+<span class="fc" id="L37">                    break;</span>
+                }
+<span class="fc" id="L39">                LearningAnalyticsProcessor.processStudentActivityLine(line, coursesMap, aggregatedData);</span>
+<span class="fc" id="L40">            }</span>
+<span class="nc" id="L41">        } catch (InterruptedException e) {</span>
+<span class="nc" id="L42">            Thread.currentThread().interrupt();</span>
+<span class="fc" id="L43">        }</span>
+<span class="fc" id="L44">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>LearningAnalyticsProcessor.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">assignment5</a> &gt; <a href="index.source.html" class="el_package">util</a> &gt; <span class="el_source">LearningAnalyticsProcessor.java</span></div><h1>LearningAnalyticsProcessor.java</h1><pre class="source lang-java linenums">package util;
+
+import java.util.concurrent.ConcurrentHashMap;
+import model.Course;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * Utility class for parsing and processing learning analytics data.
+ */
+public final class LearningAnalyticsProcessor {
+
+    private LearningAnalyticsProcessor() {
+        // Private constructor to prevent instantiation
+    }
+
+    /**
+     * Loads and parses a courses CSV file into a map of course keys to Course objects.
+     *
+     * @param coursesFilePath Path to the courses.csv file.
+     * @return A map of course keys (&quot;module_presentation&quot;) to Course objects.
+     * @throws IOException If an error occurs while reading the file.
+     */
+    public static Map&lt;String, Course&gt; loadCourses(String coursesFilePath) throws IOException {
+<span class="fc" id="L27">        List&lt;String&gt; lines = CsvFileReader.readCsvFile(coursesFilePath);</span>
+<span class="fc" id="L28">        Map&lt;String, Course&gt; courses = new HashMap&lt;&gt;();</span>
+
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        for (String line : lines) {</span>
+            try {
+<span class="fc" id="L32">                String[] parts = line.split(&quot;,(?=(?:[^\&quot;]*\&quot;[^\&quot;]*\&quot;)*[^\&quot;]*$)&quot;);</span>
+<span class="pc bpc" id="L33" title="1 of 2 branches missed.">                if (parts.length != 3) {</span>
+<span class="nc" id="L34">                    System.err.println(&quot;Invalid line format in courses.csv: &quot; + line);</span>
+<span class="nc" id="L35">                    continue;</span>
+                }
+
+<span class="fc" id="L38">                String codeModule = parts[0].replace(&quot;\&quot;&quot;, &quot;&quot;);</span>
+<span class="fc" id="L39">                String codePresentation = parts[1].replace(&quot;\&quot;&quot;, &quot;&quot;);</span>
+<span class="fc" id="L40">                int length = Integer.parseInt(parts[2].replace(&quot;\&quot;&quot;, &quot;&quot;));</span>
+
+<span class="fc" id="L42">                String key = codeModule + &quot;_&quot; + codePresentation;</span>
+<span class="fc" id="L43">                courses.put(key, new Course(codeModule, codePresentation, length));</span>
+<span class="fc" id="L44">            } catch (NumberFormatException e) {</span>
+<span class="fc" id="L45">                System.err.println(&quot;Invalid number format in courses.csv: &quot; + line);</span>
+<span class="fc" id="L46">            }</span>
+<span class="fc" id="L47">        }</span>
+<span class="fc" id="L48">        return courses;</span>
+    }
+
+    /**
+     * Processes a studentVle.csv file and aggregates click data by course and date.
+     *
+     * @param studentVleFilePath Path to the studentVle.csv file.
+     * @param coursesMap A map of valid course keys to Course objects.
+     * @return A map of course keys to maps of dates and total clicks.
+     * @throws IOException If an error occurs while reading the file.
+     */
+    public static Map&lt;String, Map&lt;Integer, Integer&gt;&gt; processStudentVle(
+        String studentVleFilePath, Map&lt;String, Course&gt; coursesMap) throws IOException {
+<span class="fc" id="L61">        List&lt;String&gt; lines = CsvFileReader.readCsvFile(studentVleFilePath);</span>
+<span class="fc" id="L62">        Map&lt;String, Map&lt;Integer, Integer&gt;&gt; summaryData = new HashMap&lt;&gt;();</span>
+
+<span class="fc bfc" id="L64" title="All 2 branches covered.">        for (String line : lines) {</span>
+<span class="fc" id="L65">            processStudentActivityLine(line, coursesMap, summaryData);</span>
+<span class="fc" id="L66">        }</span>
+<span class="fc" id="L67">        return summaryData;</span>
+    }
+    /**
+     * Processes a single line from the studentVle.csv file and updates the aggregated data.
+     *
+     * @param line The CSV line to process
+     * @param coursesMap Map of valid course keys to Course objects
+     * @param aggregatedData Map to store the aggregated click data
+     */
+    public static void processStudentActivityLine(String line, Map&lt;String, Course&gt; coursesMap,
+        Map&lt;String, Map&lt;Integer, Integer&gt;&gt; aggregatedData) {
+        try {
+<span class="fc" id="L79">            String[] parts = line.split(&quot;,(?=(?:[^\&quot;]*\&quot;[^\&quot;]*\&quot;)*[^\&quot;]*$)&quot;);</span>
+<span class="fc bfc" id="L80" title="All 2 branches covered.">            if (parts.length != 6) {</span>
+<span class="fc" id="L81">                System.err.println(&quot;Invalid line format: &quot; + line);</span>
+<span class="fc" id="L82">                return;</span>
+            }
+
+<span class="fc" id="L85">            String codeModule = parts[0].replace(&quot;\&quot;&quot;, &quot;&quot;);</span>
+<span class="fc" id="L86">            String codePresentation = parts[1].replace(&quot;\&quot;&quot;, &quot;&quot;);</span>
+<span class="fc" id="L87">            int date = Integer.parseInt(parts[4].replace(&quot;\&quot;&quot;, &quot;&quot;));</span>
+<span class="fc" id="L88">            int sumClick = Integer.parseInt(parts[5].replace(&quot;\&quot;&quot;, &quot;&quot;));</span>
+
+<span class="fc" id="L90">            String key = codeModule + &quot;_&quot; + codePresentation;</span>
+
+<span class="fc bfc" id="L92" title="All 2 branches covered.">            if (!coursesMap.containsKey(key)) {</span>
+<span class="fc" id="L93">                return;</span>
+            }
+
+<span class="fc" id="L96">            aggregatedData.computeIfAbsent(key, k -&gt; new ConcurrentHashMap&lt;&gt;()).merge(date, sumClick, Integer::sum);</span>
+<span class="fc" id="L97">        } catch (NumberFormatException e) {</span>
+<span class="fc" id="L98">            System.err.println(&quot;Invalid number format in line: &quot; + line);</span>
+<span class="fc" id="L99">        }</span>
+<span class="fc" id="L100">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="concurrentSolution.ThresholdProcessorTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-03-30T21:36:11" hostname="Saumyas-MBP" time="0.043">
+  <properties/>
+  <testcase name="testEqualsAndHashCodeWithDifferentStates()" classname="concurrentSolution.ThresholdProcessorTest" time="0.009"/>
+  <testcase name="testProcessFilesWithInvalidFileFormat()" classname="concurrentSolution.ThresholdProcessorTest" time="0.018"/>
+  <testcase name="testProcessFilesWithInvalidNumberFormat()" classname="concurrentSolution.ThresholdProcessorTest" time="0.001"/>
+  <testcase name="testNonExistentOutputDirectory()" classname="concurrentSolution.ThresholdProcessorTest" time="0.003"/>
+  <testcase name="testNegativeThreshold()" classname="concurrentSolution.ThresholdProcessorTest" time="0.002"/>
+  <testcase name="testEqualsAndHashCodeConsistency()" classname="concurrentSolution.ThresholdProcessorTest" time="0.001"/>
+  <testcase name="testProcessFilesWithValidData()" classname="concurrentSolution.ThresholdProcessorTest" time="0.004"/>
+  <system-out><![CDATA[Threshold processing complete! Check activity-100.csv
+Threshold processing complete! Check activity-100.csv
+Threshold processing complete! Check activity-200.csv
+]]></system-out>
+  <system-err><![CDATA[Invalid line format in AAA_2013J.csv: 1,2,3
+Invalid number format in AAA_2013J.csv: abc,100
+Invalid number format in AAA_2013J.csv: -10,xyz
+]]></system-err>
+</testsuite>

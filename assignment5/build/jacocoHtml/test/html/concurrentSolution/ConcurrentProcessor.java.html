@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ConcurrentProcessor.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">assignment5</a> &gt; <a href="index.source.html" class="el_package">concurrentSolution</a> &gt; <span class="el_source">ConcurrentProcessor.java</span></div><h1>ConcurrentProcessor.java</h1><pre class="source lang-java linenums">package concurrentSolution;
+
+import java.io.*;
+import java.nio.file.Paths;
+import java.util.*;
+import java.util.concurrent.*;
+import model.Course;
+import util.CourseActivityCsvWriter;
+import util.LearningAnalyticsProcessor;
+
+/**
+ * Concurrent implementation of the OULAD data processor. Uses a producer-consumer pattern to
+ * process course and student activity data to generate summary files.
+ */
+public class ConcurrentProcessor {
+
+  private final String coursesFile;
+  private final String studentVleFile;
+  private final String outputDirectory;
+<span class="pc" id="L20">  private final Map&lt;String, Course&gt; coursesMap = new ConcurrentHashMap&lt;&gt;();</span>
+  private final BlockingQueue&lt;String&gt; queue;
+  private final ExecutorService executorService;
+  private final int numThreads;
+<span class="pc" id="L24">  private final Map&lt;String, Map&lt;Integer, Integer&gt;&gt; aggregatedData = new ConcurrentHashMap&lt;&gt;();</span>
+
+  /**
+   * Constructor that initializes the processor with input directory.
+   *
+   * @param inputDirectory The directory containing the OULAD csv files
+   */
+<span class="nc" id="L31">  public ConcurrentProcessor(String inputDirectory) {</span>
+<span class="nc" id="L32">    this.coursesFile = Paths.get(inputDirectory, &quot;courses.csv&quot;).toString();</span>
+<span class="nc" id="L33">    this.studentVleFile = Paths.get(inputDirectory, &quot;studentVle.csv&quot;).toString();</span>
+<span class="nc" id="L34">    this.outputDirectory = getOutputDirectory();</span>
+<span class="nc" id="L35">    this.numThreads = Runtime.getRuntime().availableProcessors();</span>
+<span class="nc" id="L36">    this.queue = new LinkedBlockingQueue&lt;&gt;(numThreads * 2);</span>
+<span class="nc" id="L37">    this.executorService = Executors.newFixedThreadPool(numThreads + 1);</span>
+<span class="nc" id="L38">  }</span>
+
+  /**
+   * Initializes the concurrent processor with specific file paths. This constructor is primarily
+   * used for testing.
+   *
+   * @param coursesFile     Path to the courses CSV file.
+   * @param studentVleFile  Path to the student activity CSV file.
+   * @param outputDirectory Directory to store the output summary files.
+   */
+<span class="fc" id="L48">  protected ConcurrentProcessor(String coursesFile, String studentVleFile, String outputDirectory) {</span>
+<span class="fc" id="L49">    this.coursesFile = coursesFile;</span>
+<span class="fc" id="L50">    this.studentVleFile = studentVleFile;</span>
+<span class="fc" id="L51">    this.outputDirectory = outputDirectory;</span>
+<span class="fc" id="L52">    this.numThreads = Runtime.getRuntime().availableProcessors();</span>
+<span class="fc" id="L53">    this.queue = new LinkedBlockingQueue&lt;&gt;(numThreads * 2);</span>
+<span class="fc" id="L54">    this.executorService = Executors.newFixedThreadPool(numThreads + 1);</span>
+<span class="fc" id="L55">  }</span>
+
+  /**
+   * Returns the default output directory for storing summary files.
+   *
+   * @return The absolute path of the output directory.
+   */
+  protected String getOutputDirectory() {
+<span class="nc" id="L63">    return Paths.get(&quot;&quot;).toAbsolutePath() + &quot;/output/concurrent&quot;;</span>
+  }
+
+  /**
+   * Loads course data from the courses CSV file into a concurrent map.
+   *
+   * @throws IOException If an error occurs while reading the file.
+   */
+  private void loadCourses() throws IOException {
+<span class="fc" id="L72">    coursesMap.putAll(LearningAnalyticsProcessor.loadCourses(coursesFile));</span>
+<span class="fc" id="L73">  }</span>
+
+  /**
+   * Executes the concurrent data processing pipeline.
+   */
+  public void execute() {
+    try {
+<span class="fc" id="L80">      System.out.println(&quot;Loading courses...&quot;);</span>
+<span class="fc" id="L81">      loadCourses();</span>
+
+      // Create output directory before starting threads
+<span class="fc" id="L84">      File outputDir = new File(outputDirectory);</span>
+<span class="pc bpc" id="L85" title="3 of 4 branches missed.">      if (!outputDir.exists() &amp;&amp; !outputDir.mkdirs()) {</span>
+<span class="nc" id="L86">        throw new IOException(&quot;Failed to create output directory: &quot; + outputDirectory);</span>
+      }
+
+<span class="fc" id="L89">      System.out.println(&quot;Starting processing with &quot; + numThreads + &quot; consumer threads...&quot;);</span>
+
+      // Submit producer
+<span class="fc" id="L92">      Future&lt;?&gt; producerFuture = executorService.submit(</span>
+          new StudentActivityProducer(studentVleFile, queue, numThreads)
+      );
+
+      // Submit consumers
+<span class="fc" id="L97">      List&lt;Future&lt;?&gt;&gt; consumerFutures = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L98" title="All 2 branches covered.">      for (int i = 0; i &lt; numThreads; i++) {</span>
+<span class="fc" id="L99">        consumerFutures.add(</span>
+<span class="fc" id="L100">            executorService.submit(</span>
+                new StudentActivityConsumer(queue, coursesMap, aggregatedData)
+            )
+        );
+      }
+
+      // Wait for producer to finish
+      try {
+<span class="fc" id="L108">        producerFuture.get(5, TimeUnit.MINUTES);</span>
+<span class="nc" id="L109">      } catch (Exception e) {</span>
+<span class="nc" id="L110">        System.err.println(&quot;Producer failed: &quot; + e.getMessage());</span>
+<span class="fc" id="L111">      }</span>
+
+      // Wait for consumers to finish
+<span class="fc bfc" id="L114" title="All 2 branches covered.">      for (Future&lt;?&gt; future : consumerFutures) {</span>
+        try {
+<span class="fc" id="L116">          future.get(5, TimeUnit.MINUTES);</span>
+<span class="nc" id="L117">        } catch (Exception e) {</span>
+<span class="nc" id="L118">          System.err.println(&quot;Consumer failed: &quot; + e.getMessage());</span>
+<span class="fc" id="L119">        }</span>
+<span class="fc" id="L120">      }</span>
+
+      // Write summary files after all processing is complete
+<span class="fc" id="L123">      System.out.println(&quot;Writing summary files...&quot;);</span>
+<span class="fc" id="L124">      CourseActivityCsvWriter.writeSummaryFiles(outputDirectory, aggregatedData);</span>
+
+<span class="fc" id="L126">      System.out.println(&quot;Processing complete! Check the 'output' directory.&quot;);</span>
+<span class="nc" id="L127">    } catch (IOException e) {</span>
+<span class="nc" id="L128">      System.err.println(&quot;Error during processing: &quot; + e.getMessage());</span>
+    } finally {
+      // Shutdown the executor service
+<span class="fc" id="L131">      executorService.shutdown();</span>
+      try {
+<span class="pc bpc" id="L133" title="1 of 2 branches missed.">        if (!executorService.awaitTermination(1, TimeUnit.MINUTES)) {</span>
+<span class="nc" id="L134">          executorService.shutdownNow();</span>
+        }
+<span class="nc" id="L136">      } catch (InterruptedException e) {</span>
+<span class="nc" id="L137">        executorService.shutdownNow();</span>
+<span class="nc" id="L138">        Thread.currentThread().interrupt();</span>
+<span class="fc" id="L139">      }</span>
+    }
+<span class="fc" id="L141">  }</span>
+
+  @Override
+  public boolean equals(Object o) {
+<span class="pc bpc" id="L145" title="2 of 4 branches missed.">    if (o == null || getClass() != o.getClass()) {</span>
+<span class="nc" id="L146">      return false;</span>
+    }
+<span class="fc" id="L148">    ConcurrentProcessor that = (ConcurrentProcessor) o;</span>
+<span class="pc bpc" id="L149" title="2 of 4 branches missed.">    return numThreads == that.numThreads &amp;&amp; Objects.equals(coursesFile, that.coursesFile)</span>
+<span class="pc bpc" id="L150" title="2 of 4 branches missed.">        &amp;&amp; Objects.equals(studentVleFile, that.studentVleFile) &amp;&amp; Objects.equals(</span>
+        outputDirectory, that.outputDirectory);
+  }
+
+  @Override
+  public int hashCode() {
+<span class="fc" id="L156">    return Objects.hash(coursesFile, studentVleFile, outputDirectory, numThreads);</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

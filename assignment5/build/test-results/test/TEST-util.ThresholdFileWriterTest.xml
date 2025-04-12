@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="util.ThresholdFileWriterTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-03-30T21:36:11" hostname="Saumyas-MBP" time="0.003">
+  <properties/>
+  <testcase name="testWriteThresholdFileWithEmptyData()" classname="util.ThresholdFileWriterTest" time="0.001"/>
+  <testcase name="testWriteThresholdFileSuccessfully()" classname="util.ThresholdFileWriterTest" time="0.001"/>
+  <testcase name="testWriteThresholdFileWithNoMatchingData()" classname="util.ThresholdFileWriterTest" time="0.0"/>
+  <system-out><![CDATA[Threshold processing complete! Check activity-100.csv
+Threshold processing complete! Check activity-100.csv
+Threshold processing complete! Check activity-100.csv
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

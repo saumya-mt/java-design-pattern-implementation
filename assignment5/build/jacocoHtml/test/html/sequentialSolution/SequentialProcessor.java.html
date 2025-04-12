@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SequentialProcessor.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">assignment5</a> &gt; <a href="index.source.html" class="el_package">sequentialSolution</a> &gt; <span class="el_source">SequentialProcessor.java</span></div><h1>SequentialProcessor.java</h1><pre class="source lang-java linenums">package sequentialSolution;
+
+import model.Course;
+import java.io.*;
+import java.nio.file.Paths;
+import java.util.*;
+import util.CourseActivityCsvWriter;
+import util.LearningAnalyticsProcessor;
+
+/**
+ * Sequential implementation of the OULAD data processor. Processes course and student activity data
+ * to generate summary files.
+ */
+public class SequentialProcessor {
+
+  private final String coursesFile;
+  private final String studentVleFile;
+  private final String outputDirectory;
+
+  /**
+   * Constructor that initializes the processor with input directory.
+   *
+   * @param inputDirectory The directory containing the OULAD csv files
+   */
+<span class="fc" id="L25">  public SequentialProcessor(String inputDirectory) {</span>
+<span class="fc" id="L26">    this.coursesFile = Paths.get(inputDirectory, &quot;courses.csv&quot;).toString();</span>
+<span class="fc" id="L27">    this.studentVleFile = Paths.get(inputDirectory, &quot;studentVle.csv&quot;).toString();</span>
+<span class="fc" id="L28">    this.outputDirectory = getOutputDirectory();</span>
+<span class="fc" id="L29">  }</span>
+
+  /**
+   * Initializes the processor with explicit file paths (used for testing purposes).
+   *
+   * @param coursesFile     Path to the courses.csv file
+   * @param studentVleFile  Path to the studentVle.csv file
+   * @param outputDirectory Path to the directory where output files will be stored
+   */
+<span class="fc" id="L38">  protected SequentialProcessor(String coursesFile, String studentVleFile, String outputDirectory) {</span>
+<span class="fc" id="L39">    this.coursesFile = coursesFile;</span>
+<span class="fc" id="L40">    this.studentVleFile = studentVleFile;</span>
+<span class="fc" id="L41">    this.outputDirectory = outputDirectory;</span>
+<span class="fc" id="L42">  }</span>
+
+  /**
+   * Retrieves the default output directory for storing processed results.
+   *
+   * @return The absolute path of the default output directory
+   */
+  protected String getOutputDirectory() {
+<span class="fc" id="L50">    return Paths.get(&quot;&quot;).toAbsolutePath() + &quot;/output/sequential&quot;;</span>
+  }
+
+  /**
+   * Executes the sequential data processing pipeline.
+   */
+  public void execute() {
+    try {
+      // Create output directory
+<span class="fc" id="L59">      File outputDir = new File(outputDirectory);</span>
+<span class="pc bpc" id="L60" title="3 of 4 branches missed.">      if (!outputDir.exists() &amp;&amp; !outputDir.mkdirs()) {</span>
+<span class="nc" id="L61">        throw new IOException(&quot;Failed to create output directory: &quot; + outputDirectory);</span>
+      }
+
+<span class="fc" id="L64">      System.out.println(&quot;Loading courses...&quot;);</span>
+<span class="fc" id="L65">      Map&lt;String, Course&gt; coursesMap = LearningAnalyticsProcessor.loadCourses(coursesFile);</span>
+
+<span class="fc" id="L67">      System.out.println(&quot;Processing studentVle data...&quot;);</span>
+<span class="fc" id="L68">      Map&lt;String, Map&lt;Integer, Integer&gt;&gt; summaryData = LearningAnalyticsProcessor.processStudentVle(</span>
+          studentVleFile, coursesMap);
+
+<span class="fc" id="L71">      System.out.println(&quot;Writing summary files...&quot;);</span>
+<span class="fc" id="L72">      CourseActivityCsvWriter.writeSummaryFiles(outputDirectory, summaryData);</span>
+
+<span class="fc" id="L74">      System.out.println(&quot;Processing complete! Check the 'output' directory.&quot;);</span>
+<span class="nc" id="L75">    } catch (IOException e) {</span>
+<span class="nc" id="L76">      System.err.println(&quot;Error processing files: &quot; + e.getMessage());</span>
+<span class="fc" id="L77">    }</span>
+<span class="fc" id="L78">  }</span>
+
+  /**
+   * Get courses file path
+   *
+   * @return courses file path
+   */
+  public String getCoursesFile() {
+<span class="fc" id="L86">    return coursesFile;</span>
+  }
+
+  /**
+   * Get student vle file path
+   *
+   * @return student vle file path
+   */
+  public String getStudentVleFile() {
+<span class="fc" id="L95">    return studentVleFile;</span>
+  }
+
+  @Override
+  public boolean equals(Object o) {
+<span class="pc bpc" id="L100" title="2 of 4 branches missed.">    if (o == null || getClass() != o.getClass()) {</span>
+<span class="nc" id="L101">      return false;</span>
+    }
+<span class="fc" id="L103">    SequentialProcessor that = (SequentialProcessor) o;</span>
+<span class="pc bpc" id="L104" title="1 of 4 branches missed.">    return Objects.equals(coursesFile, that.coursesFile) &amp;&amp; Objects.equals(</span>
+<span class="pc bpc" id="L105" title="1 of 2 branches missed.">        studentVleFile, that.studentVleFile) &amp;&amp; Objects.equals(outputDirectory,</span>
+        that.outputDirectory);
+  }
+
+  @Override
+  public int hashCode() {
+<span class="fc" id="L111">    return Objects.hash(coursesFile, studentVleFile, outputDirectory);</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

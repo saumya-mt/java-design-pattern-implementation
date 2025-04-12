@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="util.CourseActivityCsvWriterTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-03-30T21:36:11" hostname="Saumyas-MBP" time="0.005">
+  <properties/>
+  <testcase name="testWriteWithInvalidData()" classname="util.CourseActivityCsvWriterTest" time="0.002"/>
+  <testcase name="testWriteEmptyData()" classname="util.CourseActivityCsvWriterTest" time="0.001"/>
+  <testcase name="testWriteSummaryFiles()" classname="util.CourseActivityCsvWriterTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

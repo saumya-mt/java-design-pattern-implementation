@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="util.LearningAnalyticsProcessorTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-03-30T21:36:11" hostname="Saumyas-MBP" time="0.017">
+  <properties/>
+  <testcase name="testProcessStudentVleWithNonExistentCourse()" classname="util.LearningAnalyticsProcessorTest" time="0.002"/>
+  <testcase name="testLoadCourses()" classname="util.LearningAnalyticsProcessorTest" time="0.002"/>
+  <testcase name="testProcessStudentVle()" classname="util.LearningAnalyticsProcessorTest" time="0.002"/>
+  <testcase name="testLoadCoursesWithInvalidData()" classname="util.LearningAnalyticsProcessorTest" time="0.003"/>
+  <testcase name="testProcessStudentVleWithInvalidData()" classname="util.LearningAnalyticsProcessorTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Invalid number format in courses.csv: AAA,2013J,invalid
+Invalid number format in line: AAA,2013J,1,1,invalid,100
+Invalid number format in line: AAA,2013J,2,1,-10,invalid
+]]></system-err>
+</testsuite>
